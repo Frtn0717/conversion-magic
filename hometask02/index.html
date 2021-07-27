@@ -4,10 +4,238 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="./coercion.js"></script>
+  <link rel="stylesheet" href="./styles.css">
   <title>Hometask02</title>
 </head>
 <body>
+  <header>
+    <h1>Type coercion is JS</h1>
+  </header>
+
+  <main>    
+    <section class="string" id="string">
+      <h2>String conversion:</h2>
+
+      <article>
+        <code>
+          String(123)    // explicit conversion <br />
+          '' + 123 &nbsp&nbsp // implicit conversion
+        </code>
+      </article>
+       <br />
+
+      <article class="conv_field" id="string_number">
+        <code>
+          String(2021) = 
+        </code>
+        <input type="text" class="string_number_result hidden" id="str_num_res" />
+        <label for="str_num_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_str_num_res" value="Show result" />
+        <label for="btn_str_num_res"></label>
+      </article>
+
+      <article class="conv_field" id="string_neg_number">
+        <code>
+          String(-2021) = 
+        </code>
+        <input type="text" class="string_neg_number_result hidden" id="str_neg_num_res" />
+        <label for="str_neg_num_res"></label>
+        <input type="button" class="btn_result" name="button" id="btn_neg_num_res" value="Show result" />
+        <label for="btn_neg_num_res"></label>
+      </article>
+      
+      <article class="conv_field" id="string_null">
+        <code>
+          String(null) = 
+        </code>
+        <input type="text" class="string_null_result hidden" id="str_null_res" />
+        <label for="str_null_res"></label>
+        <input type="button" class="btn_result" name="button" id="btn_str_null_res" value="Show result" />
+        <label for="btn_str_null_res"></label>
+      </article>
+
+      <article class="conv_field" id="string_undefined">
+        <code>
+          String(undefined) = 
+        </code>
+        <input type="text" class="string_undefined_result hidden" id="str_und_res" />
+        <label for="str_und_res"></label>
+        <input type="button" class="btn_result" name="button" id="btn_str_und_res" value="Show result" />
+        <label for="btn_str_und_res"></label>
+      </article>
+
+      <article class="conv_field" id="string_true">
+        <code>
+          String(true) = 
+        </code>
+        <input type="text" class="string_true_result hidden" id="str_true_res" />
+        <label for="str_true_res"></label>
+        <input type="button" class="btn_result" name="button" id="btn_str_res" value="Show result" />
+        <label for="btn_str_res"></label>
+      </article>
+
+      <article class="conv_field" id="string_false">
+        <code>
+          String(false) = 
+        </code>
+        <input type="text" class="string_false_result hidden" id="str_false_res" />
+        <label for="str_false_res"></label>
+        <input type="button" class="btn_result" name="button" id="btn_str_false_res" value="Show result" />
+        <label for="btn_str_false_res"></label>
+      </article>
+      <br />
+
+      <article>
+        <code>
+          String(Symbol('my symbol'))   // 'Symbol(my symbol') <br />
+          '' + Symbol('my symbol')  &nbsp&nbsp // Type error is thrown
+        </code>
+      </article>
+      <br />
+    </section>
+
+    <section class="boolean" id="boolean">
+      <h2>
+        Boolean conversion:
+      </h2>
+
+      <article>
+        <code>
+          Boolean(2)     &nbsp&nbsp&nbsp // explicit <br />
+          if (2) { ... }      // implicit due to logical context <br />
+          !!2 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // implicit due to logical operator <br />
+          2 || 'hello' &nbsp // implicit due to logical operator <br /><br />
+        </code>
+      </article>
+
+      <article class="conv_field" id="boolean_empty">
+        <code>
+          Boolean('') = 
+        </code>
+        <input type="text" class="boolean_emp_result hidden" id="bool_emp_res" />
+        <label for="bool_emp_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_bool_emp_res" value="Show result" />
+        <label for="btn_bool_emp_res"></label>
+      </article>
+
+      <article class="conv_field" id="boolean_zero">
+        <code>
+          Boolean(0) = 
+        </code>
+        <input type="text" class="boolean_zero_result hidden" id="bool_zero_res" />
+        <label for="bool_zero_res"></label>
+        <input type="button" class="btn_result" name="button" id="btn_bool_zero_res" value="Show result" />
+        <label for="btn_bool_zero_res"></label>
+      </article>
+      
+      <article class="conv_field" id="boolean_neg_zero">
+        <code>
+          Boolean(-0) = 
+        </code>
+        <input type="text" class="boolean_neg_zero_result hidden" id="bool_neg_zero_res" />
+        <label for="bool_neg_zero_res"></label>
+        <input type="button" class="btn_result" name="button" id="btn_bool_neg_zero_res" value="Show result" />
+        <label for="btn_bool_neg_zero_res"></label>
+      </article>
+
+      <article class="conv_field" id="boolean_nan">
+        <code>
+          Boolean(NaN) = 
+        </code>
+        <input type="text" class="boolean_nan_result hidden" id="bool_nan_res" />
+        <label for="bool_nan_res"></label>
+        <input type="button" class="btn_result" name="button" id="btn_bool_nan_res" value="Show result" />
+        <label for="btn_bool_nan_res"></label>
+      </article>
+
+      <article class="conv_field" id="boolean_null">
+        <code>
+          Boolean(null) = 
+        </code>
+        <input type="text" class="boolean_null_result hidden" id="bool_null_res" />
+        <label for="bool_null_res"></label>
+        <input type="button" class="btn_result" name="button" id="btn_bool_null_res" value="Show result" />
+        <label for="btn_bool_null_res"></label>
+      </article>
+
+      <article class="conv_field" id="boolean_und">
+        <code>
+          Boolean(undefined) = 
+        </code>
+        <input type="text" class="boolean_und_result hidden" id="bool_und_res" />
+        <label for="bool_und_res"></label>
+        <input type="button" class="btn_result" name="button" id="btn_bool_und_res" value="Show result" />
+        <label for="btn_bool_und_res"></label>
+      </article>
+
+      <article class="conv_field" id="boolean_false">
+        <code>
+          Boolean(false) = 
+        </code>
+        <input type="text" class="boolean_false_result hidden" id="bool_false_res" />
+        <label for="bool_false_res"></label>
+        <input type="button" class="btn_result" name="button" id="btn_bool_false_res" value="Show result" />
+        <label for="btn_bool_false_res"></label>
+      </article>
+      <br />
+
+      <article class="conv_field" id="boolean_object">
+        <code>
+          Boolean({}) = 
+        </code>
+        <input type="text" class="boolean_obj_result hidden" id="bool_obj_res" />
+        <label for="bool_obj_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_bool_obj_res" value="Show result" />
+        <label for="btn_bool_obj_res"></label>
+      </article>
+
+      <article class="conv_field" id="boolean_array">
+        <code>
+          Boolean([]) = 
+        </code>
+        <input type="text" class="boolean_arr_result hidden" id="bool_arr_res" />
+        <label for="bool_arr_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_bool_arr_res" value="Show result" />
+        <label for="btn_bool_arr_res"></label>
+      </article>
+
+      <article class="conv_field" id="boolean_symbol">
+        <code>
+          Boolean(Symbol()) = 
+        </code>
+        <input type="text" class="boolean_symb_result hidden" id="bool_symb_res" />
+        <label for="bool_symb_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_bool_symb_res" value="Show result" />
+        <label for="btn_bool_symb_res"></label>
+      </article>
+
+      <article class="conv_field" id="boolean_symbol_logic">
+        <code>
+          !!Symbol() = 
+        </code>
+        <input type="text" class="boolean_symb_log_result hidden" id="bool_symb_log_res" />
+        <label for="bool_symb_log_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_bool_symb_log_res" value="Show result" />
+        <label for="btn_bool_symb_log_res"></label>
+      </article>
+
+      <article class="conv_field" id="boolean_function">
+        <code>
+          Boolean(function() {}) = 
+        </code>
+        <input type="text" class="boolean_func_result hidden" id="bool_func_res" />
+        <label for="bool_func_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_bool_func_res" value="Show result" />
+        <label for="btn_bool_func_res"></label>
+      </article>
+
+    </section>
+  </main>
   
+  <footer>
+    
+  </footer>
+
+  <script src="./coercion.js"></script>
 </body>
 </html>
