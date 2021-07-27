@@ -101,7 +101,7 @@
 
       <article>
         <code>
-          Boolean(2)     &nbsp&nbsp&nbsp // explicit <br />
+          Boolean(2)     &nbsp&nbsp&nbsp // explicit conversion <br />
           if (2) { ... }      // implicit due to logical context <br />
           !!2 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // implicit due to logical operator <br />
           2 || 'hello' &nbsp // implicit due to logical operator <br /><br />
@@ -228,6 +228,303 @@
         <input type="button" class="btn_result" name="button" id="btn_bool_func_res" value="Show result" />
         <label for="btn_bool_func_res"></label>
       </article>
+      <br />
+
+    </section>
+
+    <section class="number" id="number">
+      <h2>
+        Numeric conversion:
+      </h2>
+
+      <article>
+        <code>
+          Number('123') // explicit conversion <br />
+          +'123' &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // implicit conversion <br />
+          123 != '456' &nbsp// implicit conversion <br />
+          4 > '5' &nbsp&nbsp&nbsp&nbsp&nbsp // implicit conversion <br />
+          5/null &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // implicit conversion <br />
+          true | 0 &nbsp&nbsp&nbsp&nbsp // implicit conversion <br />
+        </code>
+      </article>
+      <br />
+
+      <article class="conv_field" id="number_null">
+        <code>
+          Number(null) = 
+        </code>
+        <input type="text" class="number_null_result hidden" id="num_null_res" />
+        <label for="num_null_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_num_null_res" value="Show result" />
+        <label for="btn_num_null_res"></label>
+      </article>
+
+      <article class="conv_field" id="number_und">
+        <code>
+          Number(undefined) = 
+        </code>
+        <input type="text" class="number_und_result hidden" id="num_und_res" />
+        <label for="num_und_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_num_und_res" value="Show result" />
+        <label for="btn_num_und_res"></label>
+      </article>
+
+      <article class="conv_field" id="number_true">
+        <code>
+          Number(true) = 
+        </code>
+        <input type="text" class="number_true_result hidden" id="num_true_res" />
+        <label for="num_true_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_num_true_res" value="Show result" />
+        <label for="btn_num_true_res"></label>
+      </article>
+
+      <article class="conv_field" id="number_false">
+        <code>
+          Number(false) = 
+        </code>
+        <input type="text" class="number_false_result hidden" id="num_false_res" />
+        <label for="num_false_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_num_false_res" value="Show result" />
+        <label for="btn_num_false_res"></label>
+      </article>
+
+      <article class="conv_field" id="number_str_num">
+        <code>
+          Number(" 12 ") = 
+        </code>
+        <input type="text" class="number_str_num_result hidden" id="num_str_num_res" />
+        <label for="num_str_num_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_num_str_num_res" value="Show result" />
+        <label for="btn_num_str_num_res"></label>
+      </article>
+
+      <article class="conv_field" id="number_neg_str_num">
+        <code>
+          Number("-12.34") = 
+        </code>
+        <input type="text" class="number_neg_str_num_result hidden" id="num_neg_str_num_res" />
+        <label for="num_neg_str_num_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_num_neg_str_num_res" value="Show result" />
+        <label for="btn_num_neg_str_num_res"></label>
+      </article>
+
+      <article class="conv_field" id="number_n">
+        <code>
+          Number("\n") = 
+        </code>
+        <input type="text" class="number_n_result hidden" id="num_n_res" />
+        <label for="num_n_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_num_n_res" value="Show result" />
+        <label for="btn_num_n_res"></label>
+      </article>
+
+      <article class="conv_field" id="number_str_num_sp">
+        <code>
+          Number(" 12s ") = 
+        </code>
+        <input type="text" class="number_str_num_sp_result hidden" id="num_str_num_sp_res" />
+        <label for="num_str_num_sp_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_num_str_num_sp_res" value="Show result" />
+        <label for="btn_num_str_num_sp_res"></label>
+      </article>
+
+      <article class="conv_field" id="number_num">
+        <code>
+          Number(123) = 
+        </code>
+        <input type="text" class="number_num_result hidden" id="num_num_res" />
+        <label for="num_num_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_num_num_res" value="Show result" />
+        <label for="btn_num_num_res"></label>
+      </article>
+      <br />
+
+      <article>
+        <code>
+          Number(Symbol('my symbol')) // TypeError is thrown <br />
+          +Symbol('123') &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // TypeError is thrown <br />
+        </code>
+      </article>
+      <br />
+
+    </section>
+
+    <section class="objects" id="objects">
+      <h2>
+        Type coercion for objects
+      </h2>
+
+      <article class="conv_field" id="objects_boolean">
+        <code>
+          true + false = 
+        </code>
+        <input type="text" class="objects_boolean_result hidden" id="obj_bool_res" />
+        <label for="obj_bool_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_bool_res" value="Show result" />
+        <label for="btn_obj_bool_res"></label>
+      </article>
+
+      <article class="conv_field" id="objects_num_str">
+        <code>
+          12 / "6" = 
+        </code>
+        <input type="text" class="objects_num_str_result hidden" id="obj_num_str_res" />
+        <label for="obj_num_str_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_num_str_res" value="Show result" />
+        <label for="btn_obj_num_str_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          "number" + 15 + 3 = 
+        </code>
+        <input type="text" class="objects_str_num_num_result hidden" id="obj_str_num_num_res" />
+        <label for="obj_str_num_num_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_str_num_num_res" value="Show result" />
+        <label for="btn_obj_str_num_num_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          15 + 3 + "number" = 
+        </code>
+        <input type="text" class="objects_num_num_str_result hidden" id="obj_num_num_str_res" />
+        <label for="obj_num_num_str_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_num_num_str_res" value="Show result" />
+        <label for="btn_obj_num_num_str_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          [1] > null  = 
+        </code>
+        <input type="text" class="objects_arr_null_result hidden" id="obj_arr_null_res" />
+        <label for="obj_arr_null_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_arr_null_res" value="Show result" />
+        <label for="btn_obj_arr_null_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          "foo" + + "bar" = 
+        </code>
+        <input type="text" class="objects_str_un_str_result hidden" id="obj_str_un_str_res" />
+        <label for="obj_str_un_str_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_str_un_str_res" value="Show result" />
+        <label for="btn_obj_str_un_str_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          'true' == true   = 
+        </code>
+        <input type="text" class="objects_str_bool_result hidden" id="obj_str_bool_res" />
+        <label for="obj_str_bool_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_str_bool_res" value="Show result" />
+        <label for="btn_obj_str_bool_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          false == 'false' = 
+        </code>
+        <input type="text" class="objects_bool_str_result hidden" id="obj_bool_str_res" />
+        <label for="obj_bool_str_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_bool_str_res" value="Show result" />
+        <label for="btnobj_bool_str_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          null == '' = 
+        </code>
+        <input type="text" class="objects_null_str_result hidden" id="obj_null_str_res" />
+        <label for="obj_null_str_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_null_str_res" value="Show result" />
+        <label for="btn_obj_null_str_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          !!"false" == !!"true"  = 
+        </code>
+        <input type="text" class="objects_log_bool_str_result hidden" id="obj_log_bool_str_res" />
+        <label for="obj_log_bool_str_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_log_bool_str_res" value="Show result" />
+        <label for="btn_obj_log_bool_str_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          ['x'] == 'x' = 
+        </code>
+        <input type="text" class="objects_arr_str_result hidden" id="obj_arr_str_res" />
+        <label for="obj_arr_str_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_arr_str_res" value="Show result" />
+        <label for="btn_obj_arr_str_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          [] + null + 1 = 
+        </code>
+        <input type="text" class="objects_arr_null_num_result hidden" id="obj_arr_null_num_res" />
+        <label for="obj_arr_null_num_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_arr_null_num_res" value="Show result" />
+        <label for="btn_obj_arr_null_num_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          [1,2,3] == [1,2,3] = 
+        </code>
+        <input type="text" class="objects_arr_arr_result hidden" id="obj_arr_arr_res" />
+        <label for="obj_arr_arr_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_arr_arr_res" value="Show result" />
+        <label for="btn_arr_arr_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          {}+[]+{}+[1] = 
+        </code>
+        <input type="text" class="objects_mix_exp_result hidden" id="obj_mix_exp_res" />
+        <label for="obj_mix_exp_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_mix_exp_res" value="Show result" />
+        <label for="btn_obj_mix_exp_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          !+[]+[]+![] = 
+        </code>
+        <input type="text" class="objects_mix_log_exp_result hidden" id="obj_mix_log_exp_res" />
+        <label for="obj_mix_log_exp_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_mix_log_exp_res" value="Show result" />
+        <label for="btn_obj_mix_log_exp_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          new Date(0) - 0 = 
+        </code>
+        <input type="text" class="objects_date_minus_result hidden" id="obj_date_minus_res" />
+        <label for="obj_date_minus_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_date_minus_res" value="Show result" />
+        <label for="btn_obj_date_minus_res"></label>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          new Date(0) + 0 = 
+        </code>
+        <input type="text" class="objects_date_plus_result hidden" id="obj_date_plus_res" />
+        <label for="obj_date_plus_res"></label>        
+        <input type="button" class="btn_result" name="button" id="btn_obj_date_plus_res" value="Show result" />
+        <label for="btn_obj_date_plus_res"></label>
+      </article>
+      <br/>
 
     </section>
   </main>
