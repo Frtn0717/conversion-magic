@@ -13,7 +13,6 @@ str.addEventListener('click', event => {
     for(item of resultHidden) {
       if(target.parentNode == item.parentNode) {
         item.classList.remove('hidden');
-        item.setAttribute('disabled', 'disabled');
         item.classList.add('show');
         target.value = 'Hide result';
       }
@@ -66,7 +65,6 @@ bool.addEventListener('click', event => {
     for(item of resultHidden) {
       if(target.parentNode == item.parentNode) {
         item.classList.remove('hidden');
-        item.setAttribute('disabled', 'disabled');
         item.classList.add('show');
         target.value = 'Hide result';
       }
@@ -143,7 +141,6 @@ num.addEventListener('click', event => {
     for(item of resultHidden) {
       if(target.parentNode == item.parentNode) {
         item.classList.remove('hidden');
-        item.setAttribute('disabled', 'disabled');
         item.classList.add('show');
         target.value = 'Hide result';
       }
@@ -208,7 +205,6 @@ obj.addEventListener('click', event => {
     for(item of resultHidden) {
       if(target.parentNode == item.parentNode) {
         item.classList.remove('hidden');
-        item.setAttribute('disabled', 'disabled');
         item.classList.add('show');
         target.value = 'Hide result';
       }
