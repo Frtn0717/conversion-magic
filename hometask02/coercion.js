@@ -3,7 +3,7 @@ const bool = document.getElementById('boolean');
 const num = document.getElementById('number');
 const obj = document.getElementById('objects');
 
-str.addEventListener('click', function openCloseString(event) {
+str.addEventListener('click', event => {
   const target = event.target;
   const resultHidden = document.querySelectorAll('.hidden');
   const resultShow = document.querySelectorAll('.show');
@@ -56,7 +56,7 @@ str.addEventListener('click', function openCloseString(event) {
   }
 });
 
-bool.addEventListener('click', function openCloseBoolean(event) {
+bool.addEventListener('click', event => {
   const target = event.target;
   const resultHidden = document.querySelectorAll('.hidden');
   const resultShow = document.querySelectorAll('.show');
@@ -133,7 +133,7 @@ bool.addEventListener('click', function openCloseBoolean(event) {
   }
 });
 
-num.addEventListener('click', function openCloseNumber(event) {
+num.addEventListener('click', event => {
   const target = event.target;
   const resultHidden = document.querySelectorAll('.hidden');
   const resultShow = document.querySelectorAll('.show');
@@ -198,7 +198,7 @@ num.addEventListener('click', function openCloseNumber(event) {
   }
 });
 
-obj.addEventListener('click', function openCloseObjects(event) {
+obj.addEventListener('click', event => {
   const target = event.target;
   const resultHidden = document.querySelectorAll('.hidden');
   const resultShow = document.querySelectorAll('.show');
