@@ -21,27 +21,27 @@ str.addEventListener('click', event => {
     for(item of convField) {
 
       if(item.querySelector('.string_number_result')) {
-        item.querySelector('.string_number_result').value = "'" + String(2021) + "'";
+        item.querySelector('.string_number_result').value = `'${String(2021)}'`;
       }
 
       if(item.querySelector('.string_neg_number_result')) {
-        item.querySelector('.string_neg_number_result').value = "'" + String(-2021) + "'";
+        item.querySelector('.string_neg_number_result').value = `'${String(-2021)}'`;
       }
 
       if(item.querySelector('.string_null_result')) {
-        item.querySelector('.string_null_result').value = "'" + String(null) + "'";
+        item.querySelector('.string_null_result').value = `'${String(null)}'`;
       }
 
       if(item.querySelector('.string_undefined_result')) {
-        item.querySelector('.string_undefined_result').value = "'" + String(undefined) + "'";
+        item.querySelector('.string_undefined_result').value = `'${String(undefined)}'`;
       }
 
       if(item.querySelector('.string_true_result')) {
-        item.querySelector('.string_true_result').value = "'" + String(true) + "'";
+        item.querySelector('.string_true_result').value = `'${String(true)}'`;
       }
 
       if(item.querySelector('.string_false_result')) {
-        item.querySelector('.string_false_result').value = "'" + String(false) + "'";
+        item.querySelector('.string_false_result').value = `'${String(false)}'`;
       }
     }
   } else {
