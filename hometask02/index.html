@@ -301,140 +301,157 @@
         Type coercion for objects
       </h2>
 
-      <article class="conv_field" id="objects_boolean">
+      <article class="conv_field">
         <code>
-          true + false = 
+          true + false =         
+          <input type="text" class="objects_boolean_result hidden" disabled />      
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: true + false  ==> 1 + 0  ==> 1</p>
         </code>
-        <input type="text" class="objects_boolean_result hidden" disabled />      
-        <input type="button" class="btn_result" name="button" value="Show result" />
-      </article>
-
-      <article class="conv_field" id="objects_num_str">
-        <code>
-          12 / "6" = 
-        </code>
-        <input type="text" class="objects_num_str_result hidden" disabled />      
-        <input type="button" class="btn_result" name="button" value="Show result" />
       </article>
 
       <article class="conv_field">
         <code>
-          "number" + 15 + 3 = 
+          12 / "6" =         
+          <input type="text" class="objects_num_str_result hidden" disabled />      
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: 12 / "6"  ==> 12 / 6  ==> 2</p>
         </code>
-        <input type="text" class="objects_str_num_num_result hidden" disabled />       
-        <input type="button" class="btn_result" name="button" value="Show result" />
       </article>
 
       <article class="conv_field">
         <code>
-          15 + 3 + "number" = 
+          "number" + 15 + 3 =         
+          <input type="text" class="objects_str_num_num_result hidden" disabled />       
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: "number" + 15 + 3  ==> "number15" + 3  ==> "number153"</p>
         </code>
-        <input type="text" class="objects_num_num_str_result hidden" disabled />     
-        <input type="button" class="btn_result" name="button" value="Show result" />  
       </article>
 
       <article class="conv_field">
         <code>
-          [1] > null  = 
+          15 + 3 + "number" =         
+          <input type="text" class="objects_num_num_str_result hidden" disabled />     
+          <input type="button" class="btn_result" name="button" value="Show result" />  
+          <p>Explanation: 15 + 3 + "number"  ==> 18 + "number"  ==> "18number"</p>
         </code>
-        <input type="text" class="objects_arr_null_result hidden" disabled />   
-        <input type="button" class="btn_result" name="button" value="Show result" />
       </article>
 
       <article class="conv_field">
         <code>
-          "foo" + + "bar" = 
+          [1] > null  =         
+          <input type="text" class="objects_arr_null_result hidden" disabled />   
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: [1] > null  ==> '1' > 0  ==> 1 > 0  ==> true</p>
         </code>
-        <input type="text" class="objects_str_un_str_result hidden" disabled />     
-        <input type="button" class="btn_result" name="button" value="Show result" />
       </article>
 
       <article class="conv_field">
         <code>
-          'true' == true   = 
+          "foo" + + "bar" =         
+          <input type="text" class="objects_str_un_str_result hidden" disabled />     
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: "foo" + + "bar"  ==> "foo" + (+"bar")  ==> "foo" + NaN  ==> "fooNaN"</p>
         </code>
-        <input type="text" class="objects_str_bool_result hidden" disabled />       
-        <input type="button" class="btn_result" name="button" value="Show result" />
       </article>
 
       <article class="conv_field">
         <code>
-          false == 'false' = 
+          'true' == true   =         
+          <input type="text" class="objects_str_bool_result hidden" disabled />       
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: 'true' == true  ==> NaN == 1  ==> false</p>
         </code>
-        <input type="text" class="objects_bool_str_result hidden" disabled />             
-        <input type="button" class="btn_result" name="button" value="Show result" />
       </article>
 
       <article class="conv_field">
         <code>
-          null == '' = 
+          false == 'false' =         
+          <input type="text" class="objects_bool_str_result hidden" disabled />             
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: false == 'false'  ==> 0 == NaN  ==> false</p>
         </code>
-        <input type="text" class="objects_null_str_result hidden" disabled />     
-        <input type="button" class="btn_result" name="button" value="Show result" />  
       </article>
 
       <article class="conv_field">
         <code>
-          !!"false" == !!"true"  = 
+          null == '' =       
+          <input type="text" class="objects_null_str_result hidden" disabled />     
+          <input type="button" class="btn_result" name="button" value="Show result" />  
+          <p>Explanation: null == ''  ==> false</p>
         </code>
-        <input type="text" class="objects_log_bool_str_result hidden" disabled />               
-        <input type="button" class="btn_result" name="button" value="Show result" />        
       </article>
 
       <article class="conv_field">
         <code>
-          ['x'] == 'x' = 
+          !!"false" == !!"true"  =         
+          <input type="text" class="objects_log_bool_str_result hidden" disabled />               
+          <input type="button" class="btn_result" name="button" value="Show result" />  
+          <p>Explanation: !!"false" == !!"true"  ==> true == true  ==> true</p>  
+        </code>    
+      </article>
+
+      <article class="conv_field">
+        <code>
+          ['x'] == 'x' =         
+          <input type="text" class="objects_arr_str_result hidden" disabled />              
+          <input type="button" class="btn_result" name="button" value="Show result" />    
+          <p>Explanation: ['x'] == 'x'  ==> 'x' == 'x'  ==>  true</p>
         </code>
-        <input type="text" class="objects_arr_str_result hidden" disabled />              
-        <input type="button" class="btn_result" name="button" value="Show result" />     
       </article>
 
       <article class="conv_field">
         <code>
           [] + null + 1 = 
-        </code>
-        <input type="text" class="objects_arr_null_num_result hidden" disabled />          
-        <input type="button" class="btn_result" name="button" value="Show result" />       
+          <input type="text" class="objects_arr_null_num_result hidden" disabled />          
+          <input type="button" class="btn_result" name="button" value="Show result" />   
+          <p>Explanation: [] + null + 1  ==>  '' + null + 1  ==>  'null' + 1  ==> 'null1'</p>
+        </code>    
       </article>
 
       <article class="conv_field">
         <code>
-          [1,2,3] == [1,2,3] = 
+          [1,2,3] == [1,2,3] =         
+         <input type="text" class="objects_arr_arr_result hidden" disabled />          
+         <input type="button" class="btn_result" name="button" value="Show result" />   
+         <p>Explanation: [1,2,3] == [1,2,3]  ==>  false</p>
         </code>
-        <input type="text" class="objects_arr_arr_result hidden" disabled />          
-        <input type="button" class="btn_result" name="button" value="Show result" />   
       </article>
 
       <article class="conv_field">
         <code>
-          {}+[]+{}+[1] = 
-        </code>
+          {}+[]+{}+[1] =         
         <input type="text" class="objects_mix_exp_result hidden" disabled />     
-        <input type="button" class="btn_result" name="button" value="Show result" />   
+        <input type="button" class="btn_result" name="button" value="Show result" />  
+        <p>Explanation: {}+[]+{}+[1]  ==> +[]+{}+[1]  ==> 0 + {} + [1]  ==> 0 + '[object Object]' + [1]  ==> '0[object Object]' + [1]  ==> '0[object Object]' + '1'  ==> '0[object Object]1'</p>
+      </code>
       </article>
 
       <article class="conv_field">
         <code>
-          !+[]+[]+![] = 
+          !+[]+[]+![] =         
+          <input type="text" class="objects_mix_log_exp_result hidden" disabled />           
+          <input type="button" class="btn_result" name="button" value="Show result" />    
+          <p>Explanation: !+[]+[]+![]  ==> (!+[]) + [] + (![])  ==> !0 + [] + false  ==> true + [] + false  ==> true + '' + false  ==> 'truefalse'</p>
         </code>
-        <input type="text" class="objects_mix_log_exp_result hidden" disabled />           
-        <input type="button" class="btn_result" name="button" value="Show result" />      
       </article>
 
       <article class="conv_field">
         <code>
-          new Date(0) - 0 = 
+          new Date(0) - 0 =         
+          <input type="text" class="objects_date_minus_result hidden" disabled />             
+          <input type="button" class="btn_result" name="button" value="Show result" />    
+          <p>Explanation: new Date(0) - 0  ==> 0 - 0  ==> 0</p>
         </code>
-        <input type="text" class="objects_date_minus_result hidden" disabled />             
-        <input type="button" class="btn_result" name="button" value="Show result" />       
       </article>
 
       <article class="conv_field">
         <code>
-          new Date(0) + 0 = 
+          new Date(0) + 0 =         
+          <input type="text" class="objects_date_plus_result hidden" disabled />        
+          <input type="button" class="btn_result" name="button" value="Show result" />  
+          <p>Explanation: new Date(0) + 0  ==> 'Thu Jan 01 1970 03:00:00 GMT+0300 (Москва, стандартное время)' + 0  ==> 'Thu Jan 01 1970 03:00:00 GMT+0300 (Москва, стандартное время)0'</p>
         </code>
-        <input type="text" class="objects_date_plus_result hidden" disabled />        
-        <input type="button" class="btn_result" name="button" value="Show result" />   
       </article>
       <br/>
 

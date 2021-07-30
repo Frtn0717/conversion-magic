@@ -7,5 +7,9 @@
 }
 
 input[type="text"] {
-  width: 900px;
+  width: 440px;
+}
+
+p {
+  margin:0 0 15px;
 }
