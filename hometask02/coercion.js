@@ -44,7 +44,7 @@ str.addEventListener('click', event => {
         item.querySelector('.string_false_result').value = `'${String(false)}'`;
       }
     }
-  } else {
+  } else if (target.value == 'Hide result') {
     for(item of resultShow) {
       if(target.parentNode == item.parentNode) {
         item.classList.remove('show');
@@ -120,7 +120,7 @@ bool.addEventListener('click', event => {
         item.querySelector('.boolean_func_result').value = Boolean(function() {});
       }
     }
-  } else {
+  } else if (target.value == 'Hide result') {
     for(item of resultShow) {
       if(target.parentNode == item.parentNode) {
         item.classList.remove('show');
@@ -184,7 +184,7 @@ num.addEventListener('click', event => {
         item.querySelector('.number_num_result').value = Number(123);
       }
     }
-  } else {
+  } else if (target.value == 'Hide result') {
     for(item of resultShow) {
       if(target.parentNode == item.parentNode) {
         item.classList.remove('show');
@@ -276,7 +276,7 @@ obj.addEventListener('click', event => {
         item.querySelector('.objects_date_plus_result').value = `'${new Date(0) + 0}'`;
       }
     }
-  } else {
+  } else if (target.value == 'Hide result') {
     for(item of resultShow) {
       if(target.parentNode == item.parentNode) {
         item.classList.remove('show');
