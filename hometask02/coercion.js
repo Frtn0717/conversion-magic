@@ -264,12 +264,6 @@ obj.addEventListener('click', event => {
         item.querySelector('.objects_arr_arr_result').value = `${[1,2,3] == [1,2,3]}`;
       }
 
-      if(item.querySelector('.objects_mix_exp_result')) {
-        //some tricks for correct result of the example
-        //do not repeat this at home
-        item.querySelector('.objects_mix_exp_result').value = `'${ + [] + {} + [1]}'`;
-      }
-
       if(item.querySelector('.objects_mix_log_exp_result')) {
         item.querySelector('.objects_mix_log_exp_result').value = `'${!+[]+[]+![]}'`;
       }
