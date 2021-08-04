@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Hometask02</title>
+</head>
+<body>
+  <header>
+    <h1>Type coercion is JS</h1>
+  </header>
+
+  <main>    
+    <section class="string" id="string">
+      <h2>String conversion:</h2>
+
+      <article>
+        <code>
+          String(123)    // explicit conversion <br />
+          '' + 123 &nbsp&nbsp // implicit conversion
+        </code>
+      </article>
+       <br />
+
+      <article class="conv_field" id="string_number">
+        <code>
+          String(2021) = 
+        </code>
+        <input type="text" class="string_number_result hidden" disabled />            
+        <input type="button" class="btn_result" name="button" value="Show result" />        
+      </article>
+
+      <article class="conv_field" id="string_neg_number">
+        <code>
+          String(-2021) = 
+        </code>
+        <input type="text" class="string_neg_number_result hidden" disabled />        
+        <input type="button" class="btn_result" name="button" value="Show result" />        
+      </article>
+      
+      <article class="conv_field" id="string_null">
+        <code>
+          String(null) = 
+        </code>
+        <input type="text" class="string_null_result hidden" disabled />        
+        <input type="button" class="btn_result" name="button" value="Show result" />        
+      </article>
+
+      <article class="conv_field" id="string_undefined">
+        <code>
+          String(undefined) = 
+        </code>
+        <input type="text" class="string_undefined_result hidden" disabled />        
+        <input type="button" class="btn_result" name="button" value="Show result" />        
+      </article>
+
+      <article class="conv_field" id="string_true">
+        <code>
+          String(true) = 
+        </code>
+        <input type="text" class="string_true_result hidden" disabled />        
+        <input type="button" class="btn_result" name="button" value="Show result" />        
+      </article>
+
+      <article class="conv_field" id="string_false">
+        <code>
+          String(false) = 
+        </code>
+        <input type="text" class="string_false_result hidden" disabled />        
+        <input type="button" class="btn_result" name="button" value="Show result" />       
+      </article>
+      <br />
+
+      <article>
+        <code>
+          String(Symbol('my symbol'))   // 'Symbol(my symbol') <br />
+          '' + Symbol('my symbol')  &nbsp&nbsp // Type error is thrown
+        </code>
+      </article>
+      <br />
+    </section>
+
+    <section class="boolean" id="boolean">
+      <h2>
+        Boolean conversion:
+      </h2>
+
+      <article>
+        <code>
+          Boolean(2)     &nbsp&nbsp&nbsp // explicit conversion <br />
+          if (2) { ... }      // implicit due to logical context <br />
+          !!2 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // implicit due to logical operator <br />
+          2 || 'hello' &nbsp // implicit due to logical operator <br /><br />
+        </code>
+      </article>
+
+      <article class="conv_field" id="boolean_empty">
+        <code>
+          Boolean('') = 
+        </code>
+        <input type="text" class="boolean_emp_result hidden" disabled />            
+        <input type="button" class="btn_result" name="button" value="Show result" />     
+      </article>
+
+      <article class="conv_field" id="boolean_zero">
+        <code>
+          Boolean(0) = 
+        </code>
+        <input type="text" class="boolean_zero_result hidden" disabled />      
+        <input type="button" class="btn_result" name="button" value="Show result" />   
+      </article>
+      
+      <article class="conv_field" id="boolean_neg_zero">
+        <code>
+          Boolean(-0) = 
+        </code>
+        <input type="text" class="boolean_neg_zero_result hidden" disabled />       
+        <input type="button" class="btn_result" name="button" value="Show result" />       
+      </article>
+
+      <article class="conv_field" id="boolean_nan">
+        <code>
+          Boolean(NaN) = 
+        </code>
+        <input type="text" class="boolean_nan_result hidden" disabled />   
+        <input type="button" class="btn_result" name="button" value="Show result" />    
+      </article>
+
+      <article class="conv_field" id="boolean_null">
+        <code>
+          Boolean(null) = 
+        </code>
+        <input type="text" class="boolean_null_result hidden" disabled />  
+        <input type="button" class="btn_result" name="button" value="Show result" />  
+      </article>
+
+      <article class="conv_field" id="boolean_und">
+        <code>
+          Boolean(undefined) = 
+        </code>
+        <input type="text" class="boolean_und_result hidden" disabled />     
+        <input type="button" class="btn_result" name="button" value="Show result" /> 
+      </article>
+
+      <article class="conv_field" id="boolean_false">
+        <code>
+          Boolean(false) = 
+        </code>
+        <input type="text" class="boolean_false_result hidden" disabled />     
+        <input type="button" class="btn_result" name="button" value="Show result" />    
+      </article>
+      <br />
+
+      <article class="conv_field" id="boolean_object">
+        <code>
+          Boolean({}) = 
+        </code>
+        <input type="text" class="boolean_obj_result hidden" disabled />        
+        <input type="button" class="btn_result" name="button" value="Show result" />
+      </article>
+
+      <article class="conv_field" id="boolean_array">
+        <code>
+          Boolean([]) = 
+        </code>
+        <input type="text" class="boolean_arr_result hidden" disabled />      
+        <input type="button" class="btn_result" name="button" value="Show result" />
+      </article>
+
+      <article class="conv_field" id="boolean_symbol">
+        <code>
+          Boolean(Symbol()) = 
+        </code>
+        <input type="text" class="boolean_symb_result hidden" disabled />  
+        <input type="button" class="btn_result" name="button" value="Show result" />  
+      </article>
+
+      <article class="conv_field" id="boolean_symbol_logic">
+        <code>
+          !!Symbol() = 
+        </code>
+        <input type="text" class="boolean_symb_log_result hidden" disabled />      
+        <input type="button" class="btn_result" name="button" value="Show result" />       
+      </article>
+
+      <article class="conv_field" id="boolean_function">
+        <code>
+          Boolean(function() {}) = 
+        </code>
+        <input type="text" class="boolean_func_result hidden" disabled />       
+        <input type="button" class="btn_result" name="button" value="Show result" />   
+      </article>
+      <br />
+
+    </section>
+
+    <section class="number" id="number">
+      <h2>
+        Numeric conversion:
+      </h2>
+
+      <article>
+        <code>
+          Number('123') // explicit conversion <br />
+          +'123' &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // implicit conversion <br />
+          123 != '456' &nbsp// implicit conversion <br />
+          4 > '5' &nbsp&nbsp&nbsp&nbsp&nbsp // implicit conversion <br />
+          5/null &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // implicit conversion <br />
+          true | 0 &nbsp&nbsp&nbsp&nbsp // implicit conversion <br />
+        </code>
+      </article>
+      <br />
+
+      <article class="conv_field" id="number_null">
+        <code>
+          Number(null) = 
+        </code>
+        <input type="text" class="number_null_result hidden" disabled />              
+        <input type="button" class="btn_result" name="button" value="Show result" />        
+      </article>
+
+      <article class="conv_field" id="number_und">
+        <code>
+          Number(undefined) = 
+        </code>
+        <input type="text" class="number_und_result hidden" disabled />            
+        <input type="button" class="btn_result" name="button" value="Show result" />        
+      </article>
+
+      <article class="conv_field" id="number_true">
+        <code>
+          Number(true) = 
+        </code>
+        <input type="text" class="number_true_result hidden" disabled />               
+        <input type="button" class="btn_result" name="button" value="Show result" />        
+      </article>
+
+      <article class="conv_field" id="number_false">
+        <code>
+          Number(false) = 
+        </code>
+        <input type="text" class="number_false_result hidden" disabled />             
+        <input type="button" class="btn_result" name="button" value="Show result" />        
+      </article>
+
+      <article class="conv_field" id="number_str_num">
+        <code>
+          Number(" 12 ") = 
+        </code>
+        <input type="text" class="number_str_num_result hidden" disabled />             
+        <input type="button" class="btn_result" name="button" value="Show result" />       
+      </article>
+
+      <article class="conv_field" id="number_neg_str_num">
+        <code>
+          Number("-12.34") = 
+        </code>
+        <input type="text" class="number_neg_str_num_result hidden" disabled />            
+        <input type="button" class="btn_result" name="button" value="Show result" />        
+      </article>
+
+      <article class="conv_field" id="number_n">
+        <code>
+          Number("\n") = 
+        </code>
+        <input type="text" class="number_n_result hidden" disabled />             
+        <input type="button" class="btn_result" name="button" value="Show result" />       
+      </article>
+
+      <article class="conv_field" id="number_str_num_sp">
+        <code>
+          Number(" 12s ") = 
+        </code>
+        <input type="text" class="number_str_num_sp_result hidden" disabled />         
+        <input type="button" class="btn_result" name="button" value="Show result" />        
+      </article>
+
+      <article class="conv_field" id="number_num">
+        <code>
+          Number(123) = 
+        </code>
+        <input type="text" class="number_num_result hidden" disabled />          
+        <input type="button" class="btn_result" name="button" value="Show result" />       
+      </article>
+      <br />
+
+      <article>
+        <code>
+          Number(Symbol('my symbol')) // TypeError is thrown <br />
+          +Symbol('123') &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // TypeError is thrown <br />
+        </code>
+      </article>
+      <br />
+
+    </section>
+
+    <section class="objects" id="objects">
+      <h2>
+        Type coercion for objects
+      </h2>
+
+      <article class="conv_field">
+        <code>
+          true + false =         
+          <input type="text" class="objects_boolean_result hidden" disabled />      
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: true + false  ==> 1 + 0  ==> 1</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          12 / "6" =         
+          <input type="text" class="objects_num_str_result hidden" disabled />      
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: 12 / "6"  ==> 12 / 6  ==> 2</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          "number" + 15 + 3 =         
+          <input type="text" class="objects_str_num_num_result hidden" disabled />       
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: "number" + 15 + 3  ==> "number15" + 3  ==> "number153"</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          15 + 3 + "number" =         
+          <input type="text" class="objects_num_num_str_result hidden" disabled />     
+          <input type="button" class="btn_result" name="button" value="Show result" />  
+          <p>Explanation: 15 + 3 + "number"  ==> 18 + "number"  ==> "18number"</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          [1] > null  =         
+          <input type="text" class="objects_arr_null_result hidden" disabled />   
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: [1] > null  ==> '1' > 0  ==> 1 > 0  ==> true</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          "foo" + + "bar" =         
+          <input type="text" class="objects_str_un_str_result hidden" disabled />     
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: "foo" + + "bar"  ==> "foo" + (+"bar")  ==> "foo" + NaN  ==> "fooNaN"</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          'true' == true   =         
+          <input type="text" class="objects_str_bool_result hidden" disabled />       
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: 'true' == true  ==> NaN == 1  ==> false</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          false == 'false' =         
+          <input type="text" class="objects_bool_str_result hidden" disabled />             
+          <input type="button" class="btn_result" name="button" value="Show result" />
+          <p>Explanation: false == 'false'  ==> 0 == NaN  ==> false</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          null == '' =       
+          <input type="text" class="objects_null_str_result hidden" disabled />     
+          <input type="button" class="btn_result" name="button" value="Show result" />  
+          <p>Explanation: null == ''  ==> false</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          !!"false" == !!"true"  =         
+          <input type="text" class="objects_log_bool_str_result hidden" disabled />               
+          <input type="button" class="btn_result" name="button" value="Show result" />  
+          <p>Explanation: !!"false" == !!"true"  ==> true == true  ==> true</p>  
+        </code>    
+      </article>
+
+      <article class="conv_field">
+        <code>
+          ['x'] == 'x' =         
+          <input type="text" class="objects_arr_str_result hidden" disabled />              
+          <input type="button" class="btn_result" name="button" value="Show result" />    
+          <p>Explanation: ['x'] == 'x'  ==> 'x' == 'x'  ==>  true</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          [] + null + 1 = 
+          <input type="text" class="objects_arr_null_num_result hidden" disabled />          
+          <input type="button" class="btn_result" name="button" value="Show result" />   
+          <p>Explanation: [] + null + 1  ==>  '' + null + 1  ==>  'null' + 1  ==> 'null1'</p>
+        </code>    
+      </article>
+
+      <article class="conv_field">
+        <code>
+          [1,2,3] == [1,2,3] =         
+         <input type="text" class="objects_arr_arr_result hidden" disabled />          
+         <input type="button" class="btn_result" name="button" value="Show result" />   
+         <p>Explanation: [1,2,3] == [1,2,3]  ==>  false</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          !+[]+[]+![] =         
+          <input type="text" class="objects_mix_log_exp_result hidden" disabled />           
+          <input type="button" class="btn_result" name="button" value="Show result" />    
+          <p>Explanation: !+[]+[]+![]  ==> (!+[]) + [] + (![])  ==> !0 + [] + false  ==> true + [] + false  ==> true + '' + false  ==> 'truefalse'</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          new Date(0) - 0 =         
+          <input type="text" class="objects_date_minus_result hidden" disabled />             
+          <input type="button" class="btn_result" name="button" value="Show result" />    
+          <p>Explanation: new Date(0) - 0  ==> 0 - 0  ==> 0</p>
+        </code>
+      </article>
+
+      <article class="conv_field">
+        <code>
+          new Date(0) + 0 =         
+          <input type="text" class="objects_date_plus_result hidden" disabled />        
+          <input type="button" class="btn_result" name="button" value="Show result" />  
+          <p>Explanation: new Date(0) + 0  ==> 'Thu Jan 01 1970 03:00:00 GMT+0300 (Москва, стандартное время)' + 0  ==> 'Thu Jan 01 1970 03:00:00 GMT+0300 (Москва, стандартное время)0'</p>
+        </code>
+      </article>
+      <br/>
+
+    </section>
+  </main>
+  
+  <footer>
+    
+  </footer>
+
+  <script src="./coercion.js"></script>
+</body>
+</html>
